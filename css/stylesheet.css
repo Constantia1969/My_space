@@ -1,28 +1,147 @@
+
+
 body {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    font-family: sans-serif;
-    font-size: 1.5rem;
-    background: #dbf4ff;
+	margin: 0;
+	font-family:'Roboto', sans-serif;
+	background-color: #FFE9A9;
 }
 
-.btn {
-    text-decoration: none;
-    font-family: sans-serif;
-    font-size: 0.9rem;
-    padding: 0.75em;
-    text-transform: uppercase;
-    background: none;
-    color: #2c2c2c;
-    border: 1px solid #4a4a4a;
-    transition: all 200ms;
+
+.navbar {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background: #3C8F2E;
+	padding: 2em;
+	margin: 0;
+	
 }
 
-.btn:hover {
-    border: 1px solid #ababab;
-    color: #2c2c2c;
-    font-size: 1.1rem;
+.link {
+	text-decoration: none;
+	color: white;
+	font-size: 2rem;
+	margin: 0.5em;
+	transition: all 500ms;
+}
+
+.link:hover, .link:focus {
+	color:  #ff471a;
+}
+
+h4  {
+	font-size: 1em;
+	text-align: center;
+	color: #404040;
+}
+
+h3  {
+	font-size: 1.2em;
+	text-align: center;
+	color: #404040;
+}
+
+h2 { 
+    font-size: 1.5em;
+    text-align: center; 
+	color: #404040;
+}
+.balls {
+    border-radius: 50%;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    top: 30%;
+    animation-name: jump;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  #red {
+    background: red;
+    left: 20%;
+    animation-timing-function: linear;
+  }
+  #blue {
+    background: blue;
+    left: 45%;
+    animation-timing-function: ease-out;
+  }
+  #green {
+    background: green;
+    left: 65%;
+    animation-timing-function: cubic-bezier(0.311, 0.441, 0.444, 1.649);
+  }
+
+  @keyframes jump {
+    50% {
+      top: 10%;
+    }
+  }
+
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  display: block;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 60%;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #3C8F2E;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: 1.5s ease;
+}
+
+.container:hover .overlay {
+  width: 100%;
+}
+
+.text {
+  white-space: nowrap; 
+  color: white;
+  font-size: 100px;
+  position: absolute;
+  overflow: hidden;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.footer {
+	text-align: center;
+	padding: 20px;
+	background: #FFE9A9;
+}
+
+.footer img {
+	opacity: 0.7;
+	width: 50px;
+	padding: 0 40px;
+}
+
+.footer img:hover {
+	opacity: 1;
+	transition: 2s;
+}
+
+@media (min-width:1000px) {
+	.navbar {
+		flex-direction: row;
+		justify-content: space-around;
+	}
 }
